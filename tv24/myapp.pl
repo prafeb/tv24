@@ -98,7 +98,7 @@ sub syncProgram
 			$name =~ s/'/''/g;
 			$desc =~ s/'/''/g;
 			my $programDateTime = $format->parse_datetime($_[0]->strftime("%d-%m-%Y ").$item->{Time});
-			$programDateTime->add( hours => 5, minutes => 7 );
+			$programDateTime->add( hours => 5, minutes => 30 );
 			
 			$sth1->execute(($name));
 			my @row = $sth1->fetchrow_array;
