@@ -109,9 +109,10 @@ sub syncProgram
 				$hash = $json->decode($result);				
 				if($hash->{'imdbRating'} eq "" || $hash->{'imdbRating'} eq "N/A"){$hash->{'imdbRating'}="0.0";}					
 				$dbh->do(sprintf "INSERT INTO movie VALUES (NULL, '%s', %s, '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')"
-					, $name, $hash->{'imdbRating'}, $desc."<br/><br/>IMDB:<br/>".$hash->{'Plot'}, $hash->{'Genre'}, $hash->{'Year'}
-					, $hash->{'Rated'}, $hash->{'Released'}, $hash->{'Director'}, $hash->{'Writer'}, $hash->{'Actors'}
-					, $hash->{'Poster'}, $hash->{'Runtime'}, $hash->{'imdbVotes'});
+					, $name, $hash->{'imdbRating'}, $desc."<br/><br/>IMDB:<br/>".$hash->{'Plot'}, $hash->{'Genre'}
+					, $hash->{'Director'}, $hash->{'Writer'}, $hash->{'Actors'}
+					, $hash->{'Poster'}, $hash->{'Runtime'}, $hash->{'Year'}
+					, $hash->{'Rated'}, $hash->{'Released'}, $hash->{'imdbVotes'});
 				$sth1->execute(($name));
 				@row = $sth1->fetchrow_array;
 			}
@@ -148,7 +149,7 @@ get '/index' => sub {
 	my $table;
 
 	# prepare program table
-	my $sth = $dbh->prepare( "SELECT b.rating, a.datetime, b.name, d.name, b.year, b.genre, b.Votes, b.plot, b.poster  FROM program a 
+	my $sth = $dbh->prepare( "SELECT b.rating, a.datetime, b.name, d.name channel, b.year, b.genre, b.Votes, b.plot, b.poster  FROM program a 
 		join movie b on a.movieid = b.id 
 		left join exception c on b.id = c.movieid and c.userid = 1
 		join channel d on d.id = a.channelid 
@@ -165,8 +166,7 @@ get '/index' => sub {
 					<th>$sth->{NAME}->[4]</th>
 					<th>$sth->{NAME}->[5]</th>
 					<th>$sth->{NAME}->[6]</th>
-					<th>$sth->{NAME}->[7]</th>
-					<th>$sth->{NAME}->[8]</th>										
+					<th>$sth->{NAME}->[7]</th>										
 				</tr>
 			</thead>
 			<tbody>";
@@ -183,7 +183,6 @@ get '/index' => sub {
 					<td>$programRow[5]</td>
 					<td>$programRow[6]</td>
 					<td>$programRow[7]</td>
-					<td>$programRow[8]</td>
 				</tr>";
 	}
 	$table = $table."</tbody></table>";
