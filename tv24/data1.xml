@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<lineup>
+	<lineup>
+		<channel number="341" name="STAR Movies" SourceID="2405"
+			HasImage="1">
+			<schedule TMSId="553-24054" Time="01:05:00" />
+			<schedule TMSId="571-24054" Time="01:35:00" />
+			<schedule TMSId="650-24054" Time="06:30:00" />
+			<schedule TMSId="566-24054" Time="08:50:00" />
+			<schedule TMSId="311-24054" Time="10:55:00" />
+			<schedule TMSId="182-24054" Time="13:05:00" />
+			<schedule TMSId="538-24054" Time="15:30:00" />
+			<schedule TMSId="593-24054" Time="17:45:00" />
+			<schedule TMSId="581-24054" Time="19:35:00" />
+			<schedule TMSId="587-24054" Time="21:30:00" />
+			<schedule TMSId="13-24054" Time="23:10:00" />
+		</channel>
+		<channel number="342" name="STAR Movies1" SourceID="2406" HasImage="1">
+			<schedule TMSId="553-24054" Time="01:05:00" />
+			<schedule TMSId="553-24054" Time="01:10:00" />
+		</channel>
+	</lineup>
+	<programs>
+		<program TMSId="553-24054" ConnectorID="553-24054" Genre="1"
+			HasExtendedInfo="0" SubGenre="15"
+			desc="Chronicle: The making of the latest Hollywood offering, The Three Musketeers."
+			descHindi="विवरण उपलब्ध नही है" fullName="" nameHindi="हॉलिवूड प्रीमियर"
+			shortName="Hollywood Premier" />
+		<program TMSId="571-24054" ConnectorID="571-24054" Genre="1"
+			HasExtendedInfo="1" SubGenre="0"
+			desc="Ben, a treasure hunter is in hot pursuit of a mythical treasure that has been passed down for centuries. His employer turned rival is on the same path and will do anything to stop Ben."
+			descHindi="विवरण उपलब्ध नही है" fullName="" nameHindi="नेशनल ट्रेजर"
+			shortName="National Treasure" />
+		<program TMSId="650-24054" ConnectorID="650-24054" Genre="1"
+			HasExtendedInfo="1" RatingCode="1" SubGenre="3"
+			desc="Romantic comedy about a New York columnist, who falls for a small-town woman, with a strange habit of fleeing from the altar in a state of premarital panic. Cast: Richard Gere, Julia Roberts"
+			descHindi="विवरण उपलब्ध नही है" fullName="" nameHindi="रनवे ब्राइड"
+			shortName="Runaway Bride" />
+		<program TMSId="566-24054" ConnectorID="566-24054" Genre="1"
+			HasExtendedInfo="1" SubGenre="0"
+			desc="A wannabe gangster's attempts at extortion in Pig Sty Alley inadvertently attracts the Axe Gang into the fray. Soon he finds himself amidst a madcap fight to protect Pig Sty Alley's turf!"
+			descHindi="विवरण उपलब्ध नही है" fullName="" nameHindi="कुंग फ़ू हसल"
+			shortName="Kung Fu Hustle" />
+		<program TMSId="311-24054" ConnectorID="311-24054" Genre="1"
+			HasExtendedInfo="1" RatingCode="7" SubGenre="0"
+			desc="Brian O'Conner (Paul Walker), now working for the FBI in LA, teams up with Dominic Toretto (Vin Diesel) to bring down a heroin importer by infiltrating his operation."
+			descHindi="विवरण उपलब्ध नही है" fullName="" nameHindi="फ़ास्ट एंड फ़्यूरियस"
+			shortName="Fast &amp; Furious" />
+		<program TMSId="182-24054" ConnectorID="182-24054" Genre="1"
+			HasExtendedInfo="1" RatingCode="1" SubGenre="9"
+			desc="A teenager discovers he's the descendant of a Greek god and sets out on an adventure to settle an on-going battle between the gods."
+			descHindi="विवरण उपलब्ध नही है" fullName=""
+			nameHindi="परसी जेकसन &amp; द ओलेम्पियनस - द लाइट" shortName="Percy Jackson &amp; The Olympians: The Light" />
+		<program TMSId="538-24054" ConnectorID="538-24054" Genre="1"
+			HasExtendedInfo="1" SubGenre="0"
+			desc="Years earlier, a motorcycle stuntman, Johnny Blaze (Nicolas Cage), sold his soul to save the life of a loved one. Now, Johnny transforms into a fiery, avenging agent of justice every night."
+			descHindi="विवरण उपलब्ध नही है" fullName="" nameHindi="घोस्ट राइडर"
+			shortName="Ghost Rider" />
+		<program TMSId="593-24054" ConnectorID="593-24054" Genre="1"
+			HasExtendedInfo="1" RatingCode="11" SubGenre="11"
+			desc="When a mutilated body is found near a lake, the only clue is a large tooth which appears to be from a huge crocodile. The local warden and a paleontologist team up to find the reptile."
+			descHindi="विवरण उपलब्ध नही है" fullName="" nameHindi="लेक प्लॅसिड"
+			shortName="Lake Placid" />
+		<program TMSId="581-24054" ConnectorID="581-24054" Genre="1"
+			HasExtendedInfo="1" RatingCode="1" SubGenre="9"
+			desc="A teenager discovers he's the descendant of a Greek god and sets out on an adventure to settle an on-going battle between the gods."
+			descHindi="विवरण उपलब्ध नही है" fullName=""
+			nameHindi="परसी जेकसन &amp; द ओलेम्पियनस - द लाइट" shortName="Percy Jackson &amp; The Olympians: The Light" />
+		<program TMSId="587-24054" ConnectorID="587-24054" Genre="1"
+			HasExtendedInfo="1" SubGenre="1"
+			desc="A man who works for a New York pet clothing store is angry with his boss and his girlfriend's best friend. A misunderstanding on a flight results in him being ordered to undergo anger management."
+			descHindi="विवरण उपलब्ध नही है" fullName="" nameHindi="एंगर मैनेजमेंट"
+			shortName="Anger Management" />
+		<program TMSId="13-24054" ConnectorID="13-24054" Genre="1"
+			HasExtendedInfo="0" SubGenre="15"
+			desc="A film based program where they show clippings of different movies."
+			descHindi="विवरण उपलब्ध नही है" fullName="" nameHindi="फिलर"
+			shortName="Filler" />
+	</programs>
+</lineup>
+

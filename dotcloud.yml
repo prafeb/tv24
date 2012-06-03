@@ -1,0 +1,18 @@
+www:
+  type: perl
+  approot: tv24
+  requirements:
+    - DBD::SQLite
+    - XML::Simple
+    - Mojolicious
+    - DateTime::Format::Strptime
+    - Mojo::ByteStream
+    - Data::Dumper
+    - Mojolicious::Lite
+    - Mojo::JSON
+    - DBI
+    - HTML::Table::FromDatabase
+    - HTML::Table
+    - DateTime
+    - LWP::UserAgent
+    

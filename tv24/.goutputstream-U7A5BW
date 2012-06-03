@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<lineup>
+<lineup>
+<channel number="341" name="STAR Movies" SourceID="2405" HasImage="1">
+  <schedule TMSId="553-24054" Time="01:05:00" />
+  <schedule TMSId="554-24054" Time="01:10:00" />
+</channel>
+<channel number="342" name="STAR" SourceID="2406" HasImage="1">
+  <schedule TMSId="553-24064" Time="01:05:00" />
+  <schedule TMSId="554-24054" Time="01:10:00" />
+</channel>
+</lineup>
+<programs>
+<program TMSId="553-24054" ConnectorID="553-24054" Genre="1" HasExtendedInfo="0" SubGenre="15" desc="Chronicle: The making of the latest Hollywood offering, The Three Musketeers." descHindi="
