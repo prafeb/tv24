@@ -66,8 +66,8 @@ sub syncProgram
 	my $format = new DateTime::Format::Strptime(pattern => '%d-%m-%Y %H:%M:%S',time_zone => 'GMT',);
 	my $xml = new XML::Simple;
 
-#	open FILE, "<data1.xml";
-#	my $data = do { local $/; <FILE> };
+	#open FILE, "<data1.xml";
+	#my $data = do { local $/; <FILE> };
 	my $data = &getHTML("http://tatasky.ryzmedia.com/v1.0/tv/fetch_daily_lineup.php?ID=1&Date=".$_[0]->strftime("%m/%d/%Y"));
     	
 	my $sth = $dbh->prepare( "SELECT id, name FROM channel" );
@@ -107,11 +107,11 @@ sub syncProgram
 				my $result = &getHTML("http://www.imdbapi.com/?i=&t=".$name);
  				$result =~ s/'/''/g;				
 				$hash = $json->decode($result);				
-				if($hash->{'Rating'} eq "" || $hash->{'Rating'} eq "N/A"){$hash->{'Rating'}="0.0";}					
+				if($hash->{'imdbRating'} eq "" || $hash->{'imdbRating'} eq "N/A"){$hash->{'imdbRating'}="0.0";}					
 				$dbh->do(sprintf "INSERT INTO movie VALUES (NULL, '%s', %s, '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')"
-					, $name, $hash->{'Rating'}, $desc."<br/><br/>IMDB:<br/>".$hash->{'Plot'}, $hash->{'Genre'}, $hash->{'Year'}
+					, $name, $hash->{'imdbRating'}, $desc."<br/><br/>IMDB:<br/>".$hash->{'Plot'}, $hash->{'Genre'}, $hash->{'Year'}
 					, $hash->{'Rated'}, $hash->{'Released'}, $hash->{'Director'}, $hash->{'Writer'}, $hash->{'Actors'}
-					, $hash->{'Poster'}, $hash->{'Runtime'}, $hash->{'Votes'});
+					, $hash->{'Poster'}, $hash->{'Runtime'}, $hash->{'imdbVotes'});
 				$sth1->execute(($name));
 				@row = $sth1->fetchrow_array;
 			}
