@@ -54,7 +54,7 @@ get '/delete/:entity/:condition' => sub{
 
 get '/sync' => sub {
     	my $self = shift;
-	for(my $i = 0; $i < 1; $i++)
+	for(my $i = 0; $i < 3; $i++)
 	{
 		&syncProgram(DateTime->today()->add(days => $i));
 	}
